@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const TopDiv = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 00px 30px 0px 30px;
+  padding: 00px 50px 0px 50px;
   justify-content: space-between;
   border-bottom: 1px solid lightgray;
 `;
@@ -19,10 +20,16 @@ const Div1 = styled.div`
   color: #282828;
   cursor: pointer;
   & input {
+    font-family: inherit;
     border: none;
     height: 30px;
     width: 50px;
-    margin-top: 22px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  & p:hover {
+    colour: green;
+    border-bottom: 2px solid green;
   }
 `;
 const ImgDiv = styled.div`
@@ -30,6 +37,20 @@ const ImgDiv = styled.div`
     height: 20px;
     width: 200px;
     padding-top: 25px;
+  }
+`;
+const Nav = styled.div`
+  margin: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  font-family: inherit;
+  & p:hover {
+    colour: green;
+    border-bottom: 2px solid green;
   }
 `;
 
@@ -52,6 +73,18 @@ function Header() {
           <p>Login</p>
         </Div1>
       </TopDiv>
+      <div style={{ borderBottom: "1px solid lightgrey" }}>
+        <Nav>
+          <p>Arts</p>
+          <p>Commmmic & Illustration</p>
+          <p>Design & Tech</p>
+          <p>Film</p>
+          <p>Food & Crafts</p>
+          <p>Games</p>
+          <p>Music</p>
+          <p>Publishing</p>
+        </Nav>
+      </div>
     </>
   );
 }
