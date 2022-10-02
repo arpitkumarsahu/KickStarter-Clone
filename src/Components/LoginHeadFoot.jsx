@@ -1,6 +1,7 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import styled from "styled-components";
+import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+
 
 const TopDiv = styled.div`
   display: flex;
@@ -39,26 +40,13 @@ const ImgDiv = styled.div`
     padding-top: 25px;
   }
 `;
-const Nav = styled.div`
-  margin: auto;
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  cursor: pointer;
-  font-family: inherit;
-  & p:hover {
-    colour: green;
-    border-bottom: 2px solid green;
-  }
-`;
 
-function Header() {
+
+function LoginHeadFoot() {
   const navigate = useNavigate()
   return (
-    <>
-      <TopDiv>
+    <div>
+       <TopDiv>
         <Div1>
           <p>Discover</p>
           <p>Start a Project</p>
@@ -76,20 +64,8 @@ function Header() {
           <p onClick={()=>navigate('/login')}>Login</p>
         </Div1>
       </TopDiv>
-      <div style={{ borderBottom: "1px solid lightgrey" }}>
-        <Nav>
-          <p>Arts</p>
-          <p>Commmmic & Illustration</p>
-          <p>Design & Tech</p>
-          <p>Film</p>
-          <p>Food & Crafts</p>
-          <p>Games</p>
-          <p>Music</p>
-          <p>Publishing</p>
-        </Nav>
-      </div>
-    </>
-  );
+    </div>
+  )
 }
 
-export default Header;
+export default LoginHeadFoot
